@@ -1,0 +1,468 @@
+
+html, body {
+    max-width: 100%;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+/* ///////////////////////////// */
+/* Header */
+/* ///////////////////////////// */
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: rgb(28, 103, 189);
+    padding: 0.5em 5em;
+    position: relative;
+    height: 5em;
+    position: sticky;
+    position: -webkit-sticky;
+    top:0;
+    z-index: 3;
+    box-shadow: 0 2px 20px 2px rgba(0,0,0,0.4);
+}
+
+header button {
+    height: 7em;
+    width: 7em;
+    border-radius: 50px;
+    position: absolute;
+    right: 12%;
+    top: 5em;
+    background: rgb(247, 171, 9);
+    background-image: url("icons8-search.svg");
+    background-size: 60%, cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 2px solid white;
+    box-shadow: 0 -0px 15px -2px rgba(0,0,0,0.4);
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+header button:hover {
+    transform: scale(1.1) rotate(-15deg);
+    outline: none;
+    box-shadow: 0 -0px 35px 0px rgba(0,0,0,0.2);
+}
+
+header button:focus {
+    transform: scale(1.1);
+    outline: none;
+    box-shadow: 0 -0px 35px 0px rgba(0,0,0,0.2);
+}
+
+.close-button {
+    background-image: url("pictures/icons8-delete-filled.svg");
+}
+
+
+header h1 {
+    color: white;
+    font-family: 'Lobster', sans-serif;
+    font-size: 4em;
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+    transition: 0.4s ease;
+}
+
+
+
+/* ///////////////////////////// */
+/* video overview */
+/* ///////////////////////////// */
+.video-overview {
+    background: white;
+    padding: 8% 5%;
+    transition: 0.4s ease;
+}
+
+.video-overview ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.video-overview li {
+    padding: 0 2em;
+    padding-bottom: 3em;
+    width: 100%;
+    height: 100%;;
+    min-width: 20em;
+    max-width: 30em;
+    
+    
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.video-overview a:hover, .video-overview a:focus {
+    transform: scale(1.05);
+}
+
+.video-overview div {
+    position: relative;
+    height: 15em;
+    width: 100%;
+    max-width: 30em;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.4);
+
+    transition: 0.3s ease;
+}
+
+.video-overview div:hover {
+    box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.5)
+}
+
+.video-overview div:after {
+    content:'';
+    position:absolute;
+    left:0; top:0;
+    width:100%; height:100%;
+    display:inline-block;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 10%,rgba(0,0,0,1) 100%); /* W3C */
+  }
+
+  .video-overview .play {
+    transition: 0.3s ease;
+    position: absolute;
+    background: url('http://theheartgarden.com.au/wp-content/uploads/2016/11/video-play-icon.png');
+    background-size: 30%, cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+  }
+
+  .video-overview div:hover .play {
+    opacity: 1;
+  }
+
+.video-overview img {
+    width:100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.video-overview a {
+    display: flex;
+    flex-direction: column-reverse;
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    height: 100%;
+    transition: 0.4s ease;
+
+    position: relative;
+}
+
+.video-overview h2 {
+    position: absolute;
+    z-index: 1;
+    padding: 1em;
+    padding-right: 2em;
+    margin: 0;
+    
+    margin-left: 1em;
+    margin-right: 50px;
+    font-size: 1em;
+    font-weight: 300;
+}
+
+.overflow {
+    overflow: hidden;
+}
+
+
+@media screen and (min-width: 750px) {
+    .video-overview li {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1050px) {
+    .video-overview li {
+        max-width: 30em;
+        width: 50%;
+    }
+}
+
+/* ///////////////////////////// */
+/* Filter */
+/* ///////////////////////////// */
+
+.filter {
+    background: rgb(117, 205, 211);
+    margin: 0;
+    padding:4em 0;
+    width: 30%;
+    height: 90%;
+    min-width: 15em;;
+    position: fixed;
+    right: -100%;
+    top: 6em;
+    transition: 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 2;
+}
+
+.filter input {
+    width: 70%;
+    height: 2rem;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    background: rgb(172, 242, 247);
+    color: white;
+    font-size: 1em;
+    transition: 0.4s ease;
+}
+
+.filter input:focus, .filter input:hover {
+    background: rgb(247, 171, 9);
+    outline: none;
+    border: 2px solid white;
+    box-sizing: border-box;
+}
+
+.filter label {
+    color: white;
+    font-family: 'Lobster', sans-serif;
+    font-size: 1.5em;
+}
+
+.show {
+    right: 0;
+}
+
+.filter-window-open {
+    margin-right: 30%;
+}
+
+@media screen and (max-width: 600px) {
+    
+    header h1 {
+        font-size: 2em;
+        margin: auto;
+    }
+
+    .filter {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1070px) {
+    .full-width {
+        width: 100% !important;
+    }
+}
+
+/* ///////////////////////////// */
+/* video player */
+/* ///////////////////////////// */
+
+.video-player {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top:0;
+    right: 0;
+    background: rgba(0,0,0,0.9);
+    z-index: -1;
+    opacity: 0;
+    transition: 0.4s ease;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.video-player iframe {
+    width: 45em;
+    height: 25em;
+    
+    
+    /* transform: translate(-50%, -50%); */
+    opacity: 0;
+    transition: 0.5s ease;
+    transition-delay: 0.5s;
+}
+
+.video-player button {
+    position: absolute;
+    top: 2em;
+    right: 2em;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2.5rem;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    font-family: 'lobster', sans-serif;
+    transition: 0.4s ease;
+}
+
+.video-player button:hover {
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 700px) {
+    .video-player iframe {
+        width: 26.5em;
+        height: 15em;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .video-player iframe {
+        width: 20em;
+        height: 12em;
+    }
+}
+
+.show-video {
+    z-index: 4;
+    opacity: 1;
+}
+
+.show-video iframe {
+    opacity: 1;
+}
+
+
+/* ///////////////////////////// */
+/* genre icon */
+/* ///////////////////////////// */
+
+.video-overview .genre {
+    height: 30px;
+    width: 30px;
+    
+    /* border-radius: 25px; */
+    /* border: 1px solid white; */
+    
+    
+    /* background-color: white; */
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+
+    z-index: 1;
+}
+
+.music {
+    background: url('pictures/music.png');
+    background-size: 60%, cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    z-index: 2;
+
+    /* #F7331F */
+}
+
+.movie {
+    background: url('pictures/movie.png');
+    background-size: 60%, cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    z-index: 2;
+
+    /* #20BB33 */
+}
+
+.business {
+    background: url('pictures/business.png');
+    background-size: 60%, cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    z-index: 2;
+
+    /* #299BE4 */
+}
+
+.web {
+    background: url('pictures/web.png');
+    background-size: 60%, cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    z-index: 2;
+    
+    /* #23F9CB */
+}
+
+.design {
+    background: url('pictures/design.png');
+    background-size: 60%, cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    z-index: 2;
+
+    /* #AD39DE */
+}
+
+.humor {
+    background: url('pictures/humor.png');
+    background-size: 60%, cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    z-index: 2;
+    
+    /* #F9CE23 */
+}
+
+.other {
+    background: url('pictures/other.png');
+    background-size: 60%, cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    z-index: 2;
+
+    /* #20BB33 */
+}
+
+/* #F58E16 */
+
+
+
+
+
+/* /* jquery */
+
+.come-in {
+    transform: translateY(150px);
+    animation: come-in 0.8s ease forwards;
+  }
+  .come-in:nth-child(odd) {
+    animation-duration: 0.6s; /* So they look staggered */
+  }
+
+  .already-visible {
+    transform: translateY(0);
+    animation: none;
+  }
+  
+  @keyframes come-in {
+    to { transform: translateY(0); }
+  }
