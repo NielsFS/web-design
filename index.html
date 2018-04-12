@@ -45,7 +45,13 @@
             <li class="module"><a href="#"><i class="genre movie"></i><h2>Saitama VS Genos</h2><div><i class="play"></i><img src="https://images.wallpapersden.com/image/download/saitama-vs-genos_61436_1920x1080.jpg" data-youtube="https://www.youtube.com/embed/km2OPUctni4?rel=0&amp;showinfo=0&amp;autoplay=1"></div></a></li>  
             <li class="module"><a href="#"><i class="genre other"></i><h2>New Zealand</h2><div><i class="play"></i><img src="https://wallup.net/wp-content/uploads/2016/01/98450-filter-nature.jpg" data-youtube="https://www.youtube.com/embed/5SgyFaBS7WI?rel=0&amp;showinfo=0&amp;autoplay=1"></div></a></li>  
             <li class="module"><a href="#"><i class="genre music"></i><h2>Faberyayo X Tom Trago feat. Willem de Bruin - Lekker Niet</h2><div><i class="play"></i><img src="https://i.ytimg.com/vi/KkvTfn_kQgU/maxresdefault.jpg" data-youtube="https://www.youtube.com/embed/KkvTfn_kQgU?rel=0&amp;showinfo=0&amp;autoplay=1"></div></a></li>  
-            <li class="module"><a href="#"><i class="genre design"></i><h2>Graphic Design in 2018</h2><div><i class="play"></i><img src="pictures/graphicdesign.png" data-youtube="https://www.youtube.com/embed/dcc1VyGvaYk?rel=0&amp;showinfo=0&amp;autoplay=1"></div></a></li>          
+            <li class="module"><a href="#"><i class="genre design"></i><h2>Graphic Design in 2018</h2><div><i class="play"></i><img src="pictures/graphicdesign.png" data-youtube="https://www.youtube.com/embed/dcc1VyGvaYk?rel=0&amp;showinfo=0&amp;autoplay=1"></div></a></li>
+            <li class="module"><a href="#"><i class="genre music"></i><h2>Kendrick Lamar - Humble</h2><div><i class="play"></i><img src="https://www.funx.nl/images/2017/04/06_89_02-kendrick-humble-2017-screenshot-billboard-embed.jpg" data-youtube="https://www.youtube.com/embed/tvTRZJ-4EyI?rel=0&amp;showinfo=0&amp;autoplay=1"></div></a></li> 
+            <li class="module"><a href="#"><i class="genre movie"></i><h2>Master Roshi VS Ganos</h2><div><i class="play"></i><img src="https://i.ytimg.com/vi/Wi0Wnu71lB4/maxresdefault.jpg" data-youtube="https://www.youtube.com/embed/JZoBHW3e-Lc?rel=0&amp;showinfo=0&amp;autoplay=1"></div></a></li>
+            <li class="module"><a href="#"><i class="genre movie"></i><h2>Vegeta VS Toppo</h2><div><i class="play"></i><img src="https://i.ytimg.com/vi/8MVxKJQPpPQ/maxresdefault.jpg" data-youtube="https://www.youtube.com/embed/Hp-0fcTJRFI?rel=0&amp;showinfo=0" frameborder="0"></div></a></li>   
+            <li class="module"><a href="#"><i class="genre design"></i><h2>10 rules to help you rule type</h2><div><i class="play"></i><img src="https://cdn-images-1.medium.com/max/1598/1*aom6VwAyjh03cOY15_x4nA.png" data-youtube="https://www.youtube.com/embed/QrNi9FmdlxY?rel=0&amp;showinfo=0&amp;autoplay=1"></div></a></li>   
+            <li class="module"><a href="#"><i class="genre web"></i><h2>An introduction to machine learning</h2><div><i class="play"></i><img src="https://community-cdn-digitalocean-com.global.ssl.fastly.net/assets/tutorials/images/large/introduction-to-machine-learning_social.png?1510178550" data-youtube="https://www.youtube.com/embed/MR633gYfrg8?rel=0&amp;showinfo=0&amp;autoplay=1"></div></a></li>   
+            <li class="module"><a href="#"><i class="genre movie"></i><h2>The Most Beautiful Shots In Movie History</h2><div><i class="play"></i><img src="https://i1.wp.com/api.onbeing.org/wp-content/uploads/2016/11/LightsCheekwood.jpg?fit=1600%2C1000&ssl=1" data-youtube="https://www.youtube.com/embed/xBasQG_6p40?rel=0&amp;showinfo=0&amp;autoplay=1"></div></a></li>              
         </ul>
     </section>
     
@@ -62,12 +68,13 @@
 
         var videoPlayer = document.querySelector(".video-player");
         var videoLink = document.querySelectorAll(".video-overview a")
-        var closeVideo = document.querySelector(".video-player button")
+        var closeVideoButton = document.querySelector(".video-player button")
 
         var body = document.querySelector("body")
 
         showFilter.addEventListener('click', function(e) {
-			e.preventDefault()
+            e.preventDefault()
+            document.querySelector("input").focus();
               
               var categoryMenu = document.querySelector(".category-menu ul")
               var categoryButton = document.querySelector('.category-menu button')
@@ -94,13 +101,22 @@
             })
         }
         
+        closeVideoButton.addEventListener('click', function(e) {
+            videoPlayer.classList.remove('show-video');
+            body.classList.remove('overflow');
+
+            var video = document.querySelector(".video-player iframe")
+            video.src = '';
+        })   
+        
+        var closeVideo = document.querySelector(".video-player")
         closeVideo.addEventListener('click', function(e) {
             videoPlayer.classList.remove('show-video');
             body.classList.remove('overflow');
 
             var video = document.querySelector(".video-player iframe")
             video.src = '';
-        })     
+        })
 
         // ////////////////////////////
         //  video links
@@ -168,6 +184,7 @@
 
         function closeMenu(){
             categoryMenu.classList.add('hide-category-menu');
+            videoOverview.classList.add('responsive-padding')
         }
         
 
