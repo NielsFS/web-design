@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Video's</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,900" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script   src="https://code.jquery.com/jquery-3.3.1.slim.js"   integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="   crossorigin="anonymous"></script>
+</head>
+<body onscroll="closeMenu()">
+    <header>
+        <h1>Videmo</h1>
+    </header>  
+    <section class="menu">
+        <div class="menu-item category-menu show-menu-item">
+            <ul>
+                <li><a href="#"><label>music</label></a><div class="genre music"></div></li>
+                <li><a href="#"><label>movie</label></a><div class="genre movie"></div></li>
+                <li><a href="#"><label>business</label></a><div class="genre business"></div></li>
+                <li><a href="#"><label>web</label></a><div class="genre web"></div></li>
+                <li><a href="#"><label>design</label></a><div class="genre design"></div></li>
+                <li><a href="#"><label>humor</label></a><div class="genre humor"></div></li>
+                <li><a href="#"><label>other</label></a><div class="genre other"></div></li>
+            </ul>
+        </div>
+        <div class="menu-item filter">
+            <label>Search:</label>
+            <input id=filterInput type="text">
+        </div>
+        <div class="menu-item add-video">
+            <h2>under construction</h2>
+        </div>
+        <div class="menu-item who-watching">
+            <h2>under construction</h2>
+        </div>
+        <nav class="navigation">
+            <ul>
+                <li class="1 select"><a href="#">Theme</a></li>
+                <li class="2"><a href="#">Search</a></li>
+                <li class="3"><a href="#">Add Video</a></li>
+                <li class="4"><a href="#">Who's Watching</a></li>
+            </ul>
+        </nav>
+        <button></button>
+    </section> 
+    
+    <section class="video-overview">
+        <ul id="videoList">
+            <li class="module"><a href="#"><i class="genre music"></i><h2>Drake - Gods Plan</h2><div><i class="play"></i><img src="pictures/godsplan.jpg" alt="Gods Plan" data-youtube="https://www.youtube.com/embed/xpVfcZ0ZcFM?rel=0&amp;showinfo=0&amp;autoplay=1"></div></a></li>
+            <li class="module"><a href="#"><i class="genre music"></i><h2>Kendrick Lamar - Kings Dead</h2><div><i class="play"></i><img src="pictures/kingsdead.jpg" alt="king is Dead" data-youtube="https://www.youtube.com/embed/VwAnsAUYnw4?rel=0&amp;showinfo=0&amp;autoplay=1"></div></a></li>
+            <li class="module"><a href="#"><i class="genre web"></i><h2>A Framework Author's Case Against Frameworks</h2><div><i class="play"></i><img src="pictures/framework-author-case.jpg" alt="Framework Author's case against frameworks" data-youtube="https://www.youtube.com/embed/VvOsegaN9Wk?rel=0&amp;showinfo=0&amp;autoplay=1"></div></a></li>
+            <li class="module"><a href="#"><i class="genre web"></i><h2>Material Design</h2><div><i class="play"></i><img src="pictures/materialdesign.jpg" alt="Material Design" data-youtube="https://www.youtube.com/embed/rrT6v5sOwJg?rel=0&amp;showinfo=0&amp;autoplay=1"></div></a></li>
+            <li class="module"><a href="#"><i class="genre business"></i><h2>#1 Entrepeneur tip</h2><div><i class="play"></i><img src="https://i.ytimg.com/vi/5Xv4DPii4i8/maxresdefault.jpg" alt="#1 entrepeneur tip" data-youtube="https://www.youtube.com/embed/flFRQEzRfS0?rel=0&amp;showinfo=0&amp;autoplay=1"></div></a></li>
+            <li class="module"><a href="#"><i class="genre other"></i><h2>Hitchcock's Definition of Hapiness</h2><div><i class="play"></i><img src="http://horror.wpengine.netdna-cdn.com/wp-content/uploads/2017/10/alfred-hitchcock-height-weight-body-measurements-1024x672.jpg" data-youtube="https://www.youtube.com/embed/14dOICbwSIs?rel=0&amp;showinfo=0&amp;autoplay=1"></div></a></li>
+            <li class="module"><a href="#"><i class="genre business"></i><h2>Steve Jobs - Product people VS Marketing people</h2><div><i class="play"></i><img src="https://cdn-images-1.medium.com/max/2000/0*euVJNE8ntEERGlCu.jpg" data-youtube="https://www.youtube.com/embed/_1rXqD6M614?rel=0&amp;showinfo=0&amp;autoplay=1"></div></a></li>
+            <li class="module"><a href="#"><i class="genre humor"></i><h2>Elon Are u Okay?</h2><div><i class="play"></i><img src="https://cdn.vox-cdn.com/thumbor/3dHdRHd0kEaWeifEQLox72HRUew=/0x0:3000x2000/1200x800/filters:focal(1436x15:1916x495)/cdn.vox-cdn.com/uploads/chorus_image/image/58545631/roundtable_elon_musk_flamethrower_apimages_ringer.0.jpg" data-youtube="https://www.youtube.com/embed/a8uyilHatBA?rel=0&amp;showinfo=0&amp;autoplay=1"></div></a></li>
+            <li class="module"><a href="#"><i class="genre humor"></i><h2>The Perfect Mutant</h2><div><i class="play"></i><img src="https://i.redd.it/0uuaxvy5l9oz.png" data-youtube="https://www.youtube.com/embed/0Qd7cT3gyrI?rel=0&amp;showinfo=0&amp;autoplay=1"></div></a></li>  
+            <li class="module"><a href="#"><i class="genre design"></i><h2>Color Psychology in Web Design</h2><div><i class="play"></i><img src="http://tomko.info/wp-content/uploads/2018/03/color-pictures-20-things-you-didnt-know-about-color-discovermagazine.jpg" data-youtube="https://www.youtube.com/embed/r9gYdD-REI0?rel=0&amp;showinfo=0&amp;autoplay=1"></div></a></li>  
+            <li class="module"><a href="#"><i class="genre movie"></i><h2>Saitama VS Genos</h2><div><i class="play"></i><img src="https://images.wallpapersden.com/image/download/saitama-vs-genos_61436_1920x1080.jpg" data-youtube="https://www.youtube.com/embed/km2OPUctni4?rel=0&amp;showinfo=0&amp;autoplay=1"></div></a></li>  
+            <li class="module"><a href="#"><i class="genre other"></i><h2>New Zealand</h2><div><i class="play"></i><img src="https://wallup.net/wp-content/uploads/2016/01/98450-filter-nature.jpg" data-youtube="https://www.youtube.com/embed/5SgyFaBS7WI?rel=0&amp;showinfo=0&amp;autoplay=1"></div></a></li>  
+            <li class="module"><a href="#"><i class="genre music"></i><h2>Faberyayo X Tom Trago feat. Willem de Bruin - Lekker Niet</h2><div><i class="play"></i><img src="https://i.ytimg.com/vi/KkvTfn_kQgU/maxresdefault.jpg" data-youtube="https://www.youtube.com/embed/KkvTfn_kQgU?rel=0&amp;showinfo=0&amp;autoplay=1"></div></a></li>  
+            <li class="module"><a href="#"><i class="genre design"></i><h2>Graphic Design in 2018</h2><div><i class="play"></i><img src="pictures/graphicdesign.png" data-youtube="https://www.youtube.com/embed/dcc1VyGvaYk?rel=0&amp;showinfo=0&amp;autoplay=1"></div></a></li>
+            <li class="module"><a href="#"><i class="genre music"></i><h2>Kendrick Lamar - Humble</h2><div><i class="play"></i><img src="https://www.funx.nl/images/2017/04/06_89_02-kendrick-humble-2017-screenshot-billboard-embed.jpg" data-youtube="https://www.youtube.com/embed/tvTRZJ-4EyI?rel=0&amp;showinfo=0&amp;autoplay=1"></div></a></li> 
+            <li class="module"><a href="#"><i class="genre movie"></i><h2>Master Roshi VS Ganos</h2><div><i class="play"></i><img src="https://i.ytimg.com/vi/Wi0Wnu71lB4/maxresdefault.jpg" data-youtube="https://www.youtube.com/embed/JZoBHW3e-Lc?rel=0&amp;showinfo=0&amp;autoplay=1"></div></a></li>
+            <li class="module"><a href="#"><i class="genre movie"></i><h2>Vegeta VS Toppo</h2><div><i class="play"></i><img src="https://i.ytimg.com/vi/8MVxKJQPpPQ/maxresdefault.jpg" data-youtube="https://www.youtube.com/embed/Hp-0fcTJRFI?rel=0&amp;showinfo=0&amp;autoplay=1" frameborder="0"></div></a></li>   
+            <li class="module"><a href="#"><i class="genre design"></i><h2>10 rules to help you rule type</h2><div><i class="play"></i><img src="https://cdn-images-1.medium.com/max/1598/1*aom6VwAyjh03cOY15_x4nA.png" data-youtube="https://www.youtube.com/embed/QrNi9FmdlxY?rel=0&amp;showinfo=0&amp;autoplay=1"></div></a></li>   
+            <li class="module"><a href="#"><i class="genre web"></i><h2>An introduction to machine learning</h2><div><i class="play"></i><img src="https://community-cdn-digitalocean-com.global.ssl.fastly.net/assets/tutorials/images/large/introduction-to-machine-learning_social.png?1510178550" data-youtube="https://www.youtube.com/embed/MR633gYfrg8?rel=0&amp;showinfo=0&amp;autoplay=1"></div></a></li>   
+            <li class="module"><a href="#"><i class="genre movie"></i><h2>The Most Beautiful Shots In Movie History</h2><div><i class="play"></i><img src="https://i1.wp.com/api.onbeing.org/wp-content/uploads/2016/11/LightsCheekwood.jpg?fit=1600%2C1000&ssl=1" data-youtube="https://www.youtube.com/embed/xBasQG_6p40?rel=0&amp;showinfo=0&amp;autoplay=1"></div></a></li>
+            <li class="module"><a href="#"><i class="genre music"></i><h2>Khalid - American Teen</h2><div><i class="play"></i><img src="https://media.vanityfair.com/photos/5a0b38231efc1566564c965a/master/pass/t-MAG-1217-Hot-Tracks-Khalid.jpg" data-youtube="https://www.youtube.com/embed/0NChtZCDCsY?rel=0&amp;showinfo=0&amp;autoplay=1"></div></a></li>
+            <li class="module"><a href="#"><i class="genre music"></i><h2>Sam Smith - Burning (Live From The Hackney Round Chapel</h2><div><i class="play"></i><img src="https://images.graphlr.io/tF511D7g10kxKbl18H4CZZ7E5XSpjvWQ6hXM/s3-top-40/6b550889-40ab-4cdb-a515-abf6de898144?w=970&h=545&q=75" data-youtube="https://www.youtube.com/embed/Df-Wo48P-M8?rel=0&amp;showinfo=0&amp;autoplay=1"></div></a></li> 
+            <li class="module"><a href="#"><i class="genre humor"></i><h2>True Hollywood stories - Prince</h2><div><i class="play"></i><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOr75ePUaItRtI7SfebrcDkfesZ2L91CVryI1lShbl2WxNxZMR" data-youtube="https://www.youtube.com/embed/ff8LEx9Mw54?rel=0&amp;showinfo=0&amp;autoplay=1"></div></a></li>               
+        </ul>
+    </section>
+    
+    <section class="video-player">
+        <button>Close</button>
+        <iframe width="560" height="315" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </section>
+
+    <script>
+        var videoOverview = document.querySelector(".video-overview")
+        var videoItem = document.querySelectorAll(".video-overview li")
+        var videoPlayer = document.querySelector(".video-player");
+        var videoLink = document.querySelectorAll(".video-overview a")
+        var closeVideoButton = document.querySelector(".video-player button")
+        var video = document.querySelector(".video-player iframe")
+        var body = document.querySelector("body")
+
+
+        for (i=0; i < videoItem.length; i++){
+            videoLink[i].addEventListener('click', function(e) {
+                e.preventDefault()
+                videoPlayer.classList.add('show-video');
+                body.classList.add('overflow');
+            })
+        }
+        
+        closeVideoButton.addEventListener('click', function(e) {
+            videoPlayer.classList.remove('show-video');
+            body.classList.remove('overflow');
+            video.src = '';
+        })   
+        
+        videoPlayer.addEventListener('click', function(e) {
+            videoPlayer.classList.remove('show-video');
+            body.classList.remove('overflow');
+            video.src = '';
+        })
+
+        // ////////////////////////////
+        //  video links
+        // ///////////////////////////
+
+        for (i=0; i < videoItem.length; i++){
+            videoLink[i].addEventListener('click', function(e) {
+            e.preventDefault()
+                youtubeURL = this.querySelector('div > img').getAttribute('data-youtube')
+                const video = document.querySelector(".video-player iframe")
+                video.src = youtubeURL
+                console.log(video.src)
+            })
+        }
+        
+        // ////////////////////////////
+        //  filter
+        // ///////////////////////////
+
+        let filterInput = document.getElementById('filterInput');
+        filterInput.addEventListener('keyup', filterResultaten);
+        function filterResultaten(){
+        let filterValue = document.getElementById('filterInput').value.toUpperCase();
+        let ul = document.getElementById('videoList');
+        let li = ul.getElementsByTagName('li');
+
+        for(let i = 0;i < li.length;i++){
+            let h2 = li[i].getElementsByTagName('h2')[0];
+    
+            if(h2.innerHTML.toUpperCase().indexOf(filterValue) > -1){
+            li[i].style.display = '';
+            } else {
+            li[i].style.display = 'none';
+            }
+        }
+        }
+
+        // ////////////////////////////
+        //  open menu
+        // ///////////////////////////
+
+        var menuButton = document.querySelector('.menu button')
+        var menu = document.querySelector('.menu')
+        
+        menuButton.addEventListener('click', function() {
+            menu.classList.toggle('hide-menu')
+            videoOverview.classList.toggle('responsive-padding')
+        })
+
+        function closeMenu(){
+            menu.classList.add('hide-menu');
+            videoOverview.classList.add('responsive-padding')
+        }
+
+        // ////////////////////////////
+        //  open menu-item
+        // ///////////////////////////
+
+
+        var navItem = document.querySelectorAll('.navigation li');
+        var menuItem = document.querySelectorAll('.menu-item');        
+
+        for (i=0; i < navItem.length; i++){
+            navItem[i].addEventListener('click', function() {
+
+                menu.classList.remove('hide-menu')
+                videoOverview.classList.remove('responsive-padding')
+                
+                var selectedNav = this.classList[0]
+                console.log(selectedNav)
+                
+                for (i=0; i < menuItem.length; i++){
+                    
+                    if (menuItem[i].classList.contains('show-menu-item')) {
+                        menuItem[i].classList.remove('show-menu-item')
+                    }
+                }
+                
+                for (i=0; i < navItem.length; i++){
+                    if (navItem[i].classList.contains('select')) {
+                        navItem[i].classList.remove('select')
+                    }
+                }
+
+                this.classList.add('select')
+
+                if (selectedNav == '1') {
+                    document.querySelector('.category-menu').classList.add('show-menu-item')
+                } else if (selectedNav == '2') {
+                    document.querySelector('.filter').classList.add('show-menu-item')
+                } else if (selectedNav = '3') {
+                    document.querySelector('.add-video').classList.add('show-menu-item')
+                } else if (selectedNav = '4') {
+                    document.querySelector('.who-watching').classList.add('show-menu-item')
+                }
+                
+            })
+        }
+
+
+        // ////////////////////////////
+        //  filter category
+        // ///////////////////////////
+        
+        var category = document.querySelectorAll('.category-menu li');
+        
+        for (i=0; i < category.length; i++){
+            category[i].addEventListener('click', function(e) {
+            e.preventDefault()
+                activeCategory = this.querySelector('div')
+                activeCategory.classList.toggle('active')
+                selectedGenre = activeCategory.classList[1]
+                console.log(selectedGenre)
+                videoGenre = document.querySelectorAll('.video-overview .' + selectedGenre +'')
+                console.log(videoGenre)
+
+                for (i=0; i < videoGenre.length; i++){
+                    videoGenre[i].parentElement.parentElement.classList.toggle('genreActive')
+                }
+            
+                for (i=0; i < videoItem.length; i++){
+                    if(videoItem[i].classList.contains('genreActive')) {
+                        videoItem[i].classList.remove('hidden')
+                    } else {
+                        videoItem[i].classList.add('hidden')
+                    } 
+
+                var checkActive = document.querySelector('.genreActive')
+                    if (checkActive == null ) {
+                    videoItem[i].classList.remove('hidden')
+                    }
+                 }
+            })
+        }
+
+
+// var queryurl = 'https://nl.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=';
+//   // fetch de gegevens van de wikipedia url
+//   fetch(queryurl)
+//   .then(response => response.json()) // transform the data into json
+//     // .then(data => console.log(data))
+//     .then(function(data) {
+
+//       console.log(data)
+//     })
+
+//         buildApiRequest('GET',
+//                 'https://www.googleapis.com/youtube/v3/search',
+//                 {'maxResults': '20',
+//                  'part': 'snippet',
+//                  'q': 'surfing',
+//                  'type': 'video',
+//                  'key': 'AIzaSyAFLVY9mCE3hBE8niWn6wcNs01nWCZcn1s'});
+
+    </script>
+
+
+
+</body>
+</html>
