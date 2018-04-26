@@ -1,9 +1,9 @@
 # Videmo
 
-[Versie 1 - week 1](http://videmo1.niels-schopman.nl/)
-[Versie 2 - week 2](http://videmo2.niels-schopman.nl/)
-[Versie 3 - week 3](http://videmo3.niels-schopman.nl/)
-[Versie 4 - week 3 - na usecase test](http://videmo4.niels-schopman.nl/)
+- [Versie 1 - week 1](http://videmo1.niels-schopman.nl/)
+- [Versie 2 - week 2](http://videmo2.niels-schopman.nl/)
+- [Versie 3 - week 3](http://videmo3.niels-schopman.nl/)
+- [Versie 4 - week 3 - na usecase test](http://videmo4.niels-schopman.nl/)
 
 # Week 1 & week 2
 ## Feedback na week 1
