@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Video's</title>
+
+    <script src="https://apis.google.com/js/client.js?onload=onClientLoad" type="text/javascript"></script>
+
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,900" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script   src="https://code.jquery.com/jquery-3.3.1.slim.js"   integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="   crossorigin="anonymous"></script>
 </head>
-<body onscroll="closeMenu()">
+<body>
     <header>
         <h1>Videmo</h1>
     </header>  
@@ -23,6 +26,7 @@
                 <li><a href="#"><label>design</label></a><div class="genre design"></div></li>
                 <li><a href="#"><label>humor</label></a><div class="genre humor"></div></li>
                 <li><a href="#"><label>other</label></a><div class="genre other"></div></li>
+                <li id="clear" ><a href="#"><label>clear filter(s)</label></a><div class="genre clear"></div></li>
             </ul>
         </div>
         <div class="menu-item filter">
@@ -30,17 +34,25 @@
             <input id=filterInput type="text">
         </div>
         <div class="menu-item add-video">
-            <h2>under construction</h2>
+            <div class="addFilter">
+                <label>Search:</label>
+                <input id=searchInput type="text">
+                <button>Search</button>
+            </div>
+            <div class="videoContainer">
+                
+            </div>
+            <div class="transparentGradient"></div>
         </div>
         <div class="menu-item who-watching">
             <h2>under construction</h2>
         </div>
         <nav class="navigation">
             <ul>
-                <li class="1 select"><a href="#">Theme</a></li>
-                <li class="2"><a href="#">Search</a></li>
+                <li class="1 select"><a href="#">Filters</a></li>
+                <li class="2"><a href="#">Who's Watching</a></li>
                 <li class="3"><a href="#">Add Video</a></li>
-                <li class="4"><a href="#">Who's Watching</a></li>
+                <li class="4"><a href="#">Search</a></li>
             </ul>
         </nav>
         <button></button>
@@ -48,35 +60,60 @@
     
     <section class="video-overview">
         <ul id="videoList">
-            <li class="module"><a href="#"><i class="genre music"></i><h2>Drake - Gods Plan</h2><div><i class="play"></i><img src="pictures/godsplan.jpg" alt="Gods Plan" data-youtube="https://www.youtube.com/embed/xpVfcZ0ZcFM?rel=0&amp;showinfo=0&amp;autoplay=1"></div></a></li>
-            <li class="module"><a href="#"><i class="genre music"></i><h2>Kendrick Lamar - Kings Dead</h2><div><i class="play"></i><img src="pictures/kingsdead.jpg" alt="king is Dead" data-youtube="https://www.youtube.com/embed/VwAnsAUYnw4?rel=0&amp;showinfo=0&amp;autoplay=1"></div></a></li>
-            <li class="module"><a href="#"><i class="genre web"></i><h2>A Framework Author's Case Against Frameworks</h2><div><i class="play"></i><img src="pictures/framework-author-case.jpg" alt="Framework Author's case against frameworks" data-youtube="https://www.youtube.com/embed/VvOsegaN9Wk?rel=0&amp;showinfo=0&amp;autoplay=1"></div></a></li>
-            <li class="module"><a href="#"><i class="genre web"></i><h2>Material Design</h2><div><i class="play"></i><img src="pictures/materialdesign.jpg" alt="Material Design" data-youtube="https://www.youtube.com/embed/rrT6v5sOwJg?rel=0&amp;showinfo=0&amp;autoplay=1"></div></a></li>
-            <li class="module"><a href="#"><i class="genre business"></i><h2>#1 Entrepeneur tip</h2><div><i class="play"></i><img src="https://i.ytimg.com/vi/5Xv4DPii4i8/maxresdefault.jpg" alt="#1 entrepeneur tip" data-youtube="https://www.youtube.com/embed/flFRQEzRfS0?rel=0&amp;showinfo=0&amp;autoplay=1"></div></a></li>
-            <li class="module"><a href="#"><i class="genre other"></i><h2>Hitchcock's Definition of Hapiness</h2><div><i class="play"></i><img src="http://horror.wpengine.netdna-cdn.com/wp-content/uploads/2017/10/alfred-hitchcock-height-weight-body-measurements-1024x672.jpg" data-youtube="https://www.youtube.com/embed/14dOICbwSIs?rel=0&amp;showinfo=0&amp;autoplay=1"></div></a></li>
-            <li class="module"><a href="#"><i class="genre business"></i><h2>Steve Jobs - Product people VS Marketing people</h2><div><i class="play"></i><img src="https://cdn-images-1.medium.com/max/2000/0*euVJNE8ntEERGlCu.jpg" data-youtube="https://www.youtube.com/embed/_1rXqD6M614?rel=0&amp;showinfo=0&amp;autoplay=1"></div></a></li>
-            <li class="module"><a href="#"><i class="genre humor"></i><h2>Elon Are u Okay?</h2><div><i class="play"></i><img src="https://cdn.vox-cdn.com/thumbor/3dHdRHd0kEaWeifEQLox72HRUew=/0x0:3000x2000/1200x800/filters:focal(1436x15:1916x495)/cdn.vox-cdn.com/uploads/chorus_image/image/58545631/roundtable_elon_musk_flamethrower_apimages_ringer.0.jpg" data-youtube="https://www.youtube.com/embed/a8uyilHatBA?rel=0&amp;showinfo=0&amp;autoplay=1"></div></a></li>
-            <li class="module"><a href="#"><i class="genre humor"></i><h2>The Perfect Mutant</h2><div><i class="play"></i><img src="https://i.redd.it/0uuaxvy5l9oz.png" data-youtube="https://www.youtube.com/embed/0Qd7cT3gyrI?rel=0&amp;showinfo=0&amp;autoplay=1"></div></a></li>  
-            <li class="module"><a href="#"><i class="genre design"></i><h2>Color Psychology in Web Design</h2><div><i class="play"></i><img src="http://tomko.info/wp-content/uploads/2018/03/color-pictures-20-things-you-didnt-know-about-color-discovermagazine.jpg" data-youtube="https://www.youtube.com/embed/r9gYdD-REI0?rel=0&amp;showinfo=0&amp;autoplay=1"></div></a></li>  
-            <li class="module"><a href="#"><i class="genre movie"></i><h2>Saitama VS Genos</h2><div><i class="play"></i><img src="https://images.wallpapersden.com/image/download/saitama-vs-genos_61436_1920x1080.jpg" data-youtube="https://www.youtube.com/embed/km2OPUctni4?rel=0&amp;showinfo=0&amp;autoplay=1"></div></a></li>  
-            <li class="module"><a href="#"><i class="genre other"></i><h2>New Zealand</h2><div><i class="play"></i><img src="https://wallup.net/wp-content/uploads/2016/01/98450-filter-nature.jpg" data-youtube="https://www.youtube.com/embed/5SgyFaBS7WI?rel=0&amp;showinfo=0&amp;autoplay=1"></div></a></li>  
-            <li class="module"><a href="#"><i class="genre music"></i><h2>Faberyayo X Tom Trago feat. Willem de Bruin - Lekker Niet</h2><div><i class="play"></i><img src="https://i.ytimg.com/vi/KkvTfn_kQgU/maxresdefault.jpg" data-youtube="https://www.youtube.com/embed/KkvTfn_kQgU?rel=0&amp;showinfo=0&amp;autoplay=1"></div></a></li>  
-            <li class="module"><a href="#"><i class="genre design"></i><h2>Graphic Design in 2018</h2><div><i class="play"></i><img src="pictures/graphicdesign.png" data-youtube="https://www.youtube.com/embed/dcc1VyGvaYk?rel=0&amp;showinfo=0&amp;autoplay=1"></div></a></li>
-            <li class="module"><a href="#"><i class="genre music"></i><h2>Kendrick Lamar - Humble</h2><div><i class="play"></i><img src="https://www.funx.nl/images/2017/04/06_89_02-kendrick-humble-2017-screenshot-billboard-embed.jpg" data-youtube="https://www.youtube.com/embed/tvTRZJ-4EyI?rel=0&amp;showinfo=0&amp;autoplay=1"></div></a></li> 
-            <li class="module"><a href="#"><i class="genre movie"></i><h2>Master Roshi VS Ganos</h2><div><i class="play"></i><img src="https://i.ytimg.com/vi/Wi0Wnu71lB4/maxresdefault.jpg" data-youtube="https://www.youtube.com/embed/JZoBHW3e-Lc?rel=0&amp;showinfo=0&amp;autoplay=1"></div></a></li>
-            <li class="module"><a href="#"><i class="genre movie"></i><h2>Vegeta VS Toppo</h2><div><i class="play"></i><img src="https://i.ytimg.com/vi/8MVxKJQPpPQ/maxresdefault.jpg" data-youtube="https://www.youtube.com/embed/Hp-0fcTJRFI?rel=0&amp;showinfo=0&amp;autoplay=1" frameborder="0"></div></a></li>   
-            <li class="module"><a href="#"><i class="genre design"></i><h2>10 rules to help you rule type</h2><div><i class="play"></i><img src="https://cdn-images-1.medium.com/max/1598/1*aom6VwAyjh03cOY15_x4nA.png" data-youtube="https://www.youtube.com/embed/QrNi9FmdlxY?rel=0&amp;showinfo=0&amp;autoplay=1"></div></a></li>   
-            <li class="module"><a href="#"><i class="genre web"></i><h2>An introduction to machine learning</h2><div><i class="play"></i><img src="https://community-cdn-digitalocean-com.global.ssl.fastly.net/assets/tutorials/images/large/introduction-to-machine-learning_social.png?1510178550" data-youtube="https://www.youtube.com/embed/MR633gYfrg8?rel=0&amp;showinfo=0&amp;autoplay=1"></div></a></li>   
-            <li class="module"><a href="#"><i class="genre movie"></i><h2>The Most Beautiful Shots In Movie History</h2><div><i class="play"></i><img src="https://i1.wp.com/api.onbeing.org/wp-content/uploads/2016/11/LightsCheekwood.jpg?fit=1600%2C1000&ssl=1" data-youtube="https://www.youtube.com/embed/xBasQG_6p40?rel=0&amp;showinfo=0&amp;autoplay=1"></div></a></li>
-            <li class="module"><a href="#"><i class="genre music"></i><h2>Khalid - American Teen</h2><div><i class="play"></i><img src="https://media.vanityfair.com/photos/5a0b38231efc1566564c965a/master/pass/t-MAG-1217-Hot-Tracks-Khalid.jpg" data-youtube="https://www.youtube.com/embed/0NChtZCDCsY?rel=0&amp;showinfo=0&amp;autoplay=1"></div></a></li>
-            <li class="module"><a href="#"><i class="genre music"></i><h2>Sam Smith - Burning (Live From The Hackney Round Chapel</h2><div><i class="play"></i><img src="https://images.graphlr.io/tF511D7g10kxKbl18H4CZZ7E5XSpjvWQ6hXM/s3-top-40/6b550889-40ab-4cdb-a515-abf6de898144?w=970&h=545&q=75" data-youtube="https://www.youtube.com/embed/Df-Wo48P-M8?rel=0&amp;showinfo=0&amp;autoplay=1"></div></a></li> 
-            <li class="module"><a href="#"><i class="genre humor"></i><h2>True Hollywood stories - Prince</h2><div><i class="play"></i><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOr75ePUaItRtI7SfebrcDkfesZ2L91CVryI1lShbl2WxNxZMR" data-youtube="https://www.youtube.com/embed/ff8LEx9Mw54?rel=0&amp;showinfo=0&amp;autoplay=1"></div></a></li>               
+            <li class="module"><a href="#"><i class="genre music"></i><h2>Drake - Gods Plan</h2><div><i class="play"></i><img src="pictures/godsplan.jpg" alt="Gods Plan" data-youtube="xpVfcZ0ZcFM"></div></a></li>
+            <li class="module"><a href="#"><i class="genre music"></i><h2>Kendrick Lamar - Kings Dead</h2><div><i class="play"></i><img src="pictures/kingsdead.jpg" alt="king is Dead" data-youtube="VwAnsAUYnw4"></div></a></li>
+            <li class="module"><a href="#"><i class="genre web"></i><h2>A Framework Author's Case Against Frameworks</h2><div><i class="play"></i><img src="pictures/framework-author-case.jpg" alt="Framework Author's case against frameworks" data-youtube="VvOsegaN9Wk"></div></a></li>
+            <li class="module"><a href="#"><i class="genre web"></i><h2>Material Design</h2><div><i class="play"></i><img src="pictures/materialdesign.jpg" alt="Material Design" data-youtube="rrT6v5sOwJg"></div></a></li>
+            <li class="module"><a href="#"><i class="genre business"></i><h2>#1 Entrepeneur tip</h2><div><i class="play"></i><img src="https://i.ytimg.com/vi/5Xv4DPii4i8/maxresdefault.jpg" alt="#1 entrepeneur tip" data-youtube="flFRQEzRfS0"></div></a></li>
+            <li class="module"><a href="#"><i class="genre other"></i><h2>Hitchcock's Definition of Hapiness</h2><div><i class="play"></i><img src="http://horror.wpengine.netdna-cdn.com/wp-content/uploads/2017/10/alfred-hitchcock-height-weight-body-measurements-1024x672.jpg" data-youtube="14dOICbwSIs"></div></a></li>
+            <li class="module"><a href="#"><i class="genre business"></i><h2>Steve Jobs - Product people VS Marketing people</h2><div><i class="play"></i><img src="https://cdn-images-1.medium.com/max/2000/0*euVJNE8ntEERGlCu.jpg" data-youtube="_1rXqD6M614"></div></a></li>
+            <li class="module"><a href="#"><i class="genre humor"></i><h2>Elon Are u Okay?</h2><div><i class="play"></i><img src="https://cdn.vox-cdn.com/thumbor/3dHdRHd0kEaWeifEQLox72HRUew=/0x0:3000x2000/1200x800/filters:focal(1436x15:1916x495)/cdn.vox-cdn.com/uploads/chorus_image/image/58545631/roundtable_elon_musk_flamethrower_apimages_ringer.0.jpg" data-youtube="a8uyilHatBA"></div></a></li>
+            <li class="module"><a href="#"><i class="genre humor"></i><h2>The Perfect Mutant</h2><div><i class="play"></i><img src="https://i.redd.it/0uuaxvy5l9oz.png" data-youtube="0Qd7cT3gyrI"></div></a></li>  
+            <li class="module"><a href="#"><i class="genre design"></i><h2>Color Psychology in Web Design</h2><div><i class="play"></i><img src="http://tomko.info/wp-content/uploads/2018/03/color-pictures-20-things-you-didnt-know-about-color-discovermagazine.jpg" data-youtube="r9gYdD-REI0"></div></a></li>  
+            <li class="module"><a href="#"><i class="genre movie"></i><h2>Saitama VS Genos</h2><div><i class="play"></i><img src="https://images.wallpapersden.com/image/download/saitama-vs-genos_61436_1920x1080.jpg" data-youtube="km2OPUctni4"></div></a></li>  
+            <li class="module"><a href="#"><i class="genre other"></i><h2>New Zealand</h2><div><i class="play"></i><img src="https://wallup.net/wp-content/uploads/2016/01/98450-filter-nature.jpg" data-youtube="5SgyFaBS7WI"></div></a></li>  
+            <li class="module"><a href="#"><i class="genre music"></i><h2>Faberyayo X Tom Trago feat. Willem de Bruin - Lekker Niet</h2><div><i class="play"></i><img src="https://i.ytimg.com/vi/KkvTfn_kQgU/maxresdefault.jpg" data-youtube="KkvTfn_kQgU"></div></a></li>  
+            <li class="module"><a href="#"><i class="genre design"></i><h2>Graphic Design in 2018</h2><div><i class="play"></i><img src="pictures/graphicdesign.png" data-youtube="dcc1VyGvaYk"></div></a></li>
+            <li class="module"><a href="#"><i class="genre music"></i><h2>Kendrick Lamar - Humble</h2><div><i class="play"></i><img src="https://www.funx.nl/images/2017/04/06_89_02-kendrick-humble-2017-screenshot-billboard-embed.jpg" data-youtube="tvTRZJ-4EyI"></div></a></li> 
+            <li class="module"><a href="#"><i class="genre movie"></i><h2>Master Roshi VS Ganos</h2><div><i class="play"></i><img src="https://i.ytimg.com/vi/Wi0Wnu71lB4/maxresdefault.jpg" data-youtube="JZoBHW3e-Lc"></div></a></li>
+            <li class="module"><a href="#"><i class="genre movie"></i><h2>Vegeta VS Toppo</h2><div><i class="play"></i><img src="https://i.ytimg.com/vi/8MVxKJQPpPQ/maxresdefault.jpg" data-youtube="Hp-0fcTJRFI" frameborder="0"></div></a></li>   
+            <li class="module"><a href="#"><i class="genre design"></i><h2>10 rules to help you rule type</h2><div><i class="play"></i><img src="https://cdn-images-1.medium.com/max/1598/1*aom6VwAyjh03cOY15_x4nA.png" data-youtube="QrNi9FmdlxY"></div></a></li>   
+            <li class="module"><a href="#"><i class="genre web"></i><h2>An introduction to machine learning</h2><div><i class="play"></i><img src="https://community-cdn-digitalocean-com.global.ssl.fastly.net/assets/tutorials/images/large/introduction-to-machine-learning_social.png?1510178550" data-youtube="MR633gYfrg8"></div></a></li>   
+            <li class="module"><a href="#"><i class="genre movie"></i><h2>The Most Beautiful Shots In Movie History</h2><div><i class="play"></i><img src="https://i1.wp.com/api.onbeing.org/wp-content/uploads/2016/11/LightsCheekwood.jpg?fit=1600%2C1000&ssl=1" data-youtube="xBasQG_6p40"></div></a></li>
+            <li class="module"><a href="#"><i class="genre music"></i><h2>Khalid - American Teen</h2><div><i class="play"></i><img src="https://media.vanityfair.com/photos/5a0b38231efc1566564c965a/master/pass/t-MAG-1217-Hot-Tracks-Khalid.jpg" data-youtube="0NChtZCDCsY?"></div></a></li>
+            <li class="module"><a href="#"><i class="genre music"></i><h2>Sam Smith - Burning (Live From The Hackney Round Chapel</h2><div><i class="play"></i><img src="https://images.graphlr.io/tF511D7g10kxKbl18H4CZZ7E5XSpjvWQ6hXM/s3-top-40/6b550889-40ab-4cdb-a515-abf6de898144?w=970&h=545&q=75" data-youtube="Df-Wo48P-M8"></div></a></li> 
+            <li class="module"><a href="#"><i class="genre humor"></i><h2>True Hollywood stories - Prince</h2><div><i class="play"></i><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOr75ePUaItRtI7SfebrcDkfesZ2L91CVryI1lShbl2WxNxZMR" data-youtube="ff8LEx9Mw54"></div></a></li>               
         </ul>
     </section>
-    
+
     <section class="video-player">
         <button>Close</button>
         <iframe width="560" height="315" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </section>
+
+    <section class="addCategory">
+        <div class="addCategoryContainer">
+            <h1>Choose a category for your video</h2>
+            <section class="selectedVideo">
+                <img src="https://cdn-images-1.medium.com/max/1598/1*aom6VwAyjh03cOY15_x4nA.png">
+                <h2>video title</h2>
+                <i class="genre music"></i>
+                <div></div>
+            </section>
+            <ul>
+                <li><a href="#"><label>music</label></a><div class="genre music active"></div></li>
+                <li><a href="#"><label>movie</label></a><div class="genre movie"></div></li>
+                <li><a href="#"><label>business</label></a><div class="genre business"></div></li>
+                <li><a href="#"><label>web</label></a><div class="genre web"></div></li>
+                <li><a href="#"><label>design</label></a><div class="genre design"></div></li>
+                <li><a href="#"><label>humor</label></a><div class="genre humor"></div></li>
+                <li><a href="#"><label>other</label></a><div class="genre other"></div></li>
+            </ul>
+            <section class="buttons">
+                <button class="add">add</button>
+                <button class="cancel">cancel</button>
+            </section>
+        </div>
     </section>
 
     <script>
@@ -87,123 +124,171 @@
         var closeVideoButton = document.querySelector(".video-player button")
         var video = document.querySelector(".video-player iframe")
         var body = document.querySelector("body")
+        var videoList = document.querySelector("#videoList")
+        
+             
+        document.onkeydown = function (e) { 
+            if (e.keyCode === 27) {
+                closeVideoButton.click();
+            }   
+        } 
 
 
-        for (i=0; i < videoItem.length; i++){
-            videoLink[i].addEventListener('click', function(e) {
-                e.preventDefault()
+        for (let i = 0; i < videoItem.length; i++) {
+            videoLink[i].addEventListener('click', function (e) {
                 videoPlayer.classList.add('show-video');
                 body.classList.add('overflow');
+                closeVideoButton.focus()
+                
+                e.preventDefault()
             })
         }
-        
-        closeVideoButton.addEventListener('click', function(e) {
+
+
+        closeVideoButton.addEventListener('click', function (e) {
             videoPlayer.classList.remove('show-video');
             body.classList.remove('overflow');
             video.src = '';
-        })   
-        
-        videoPlayer.addEventListener('click', function(e) {
-            videoPlayer.classList.remove('show-video');
-            body.classList.remove('overflow');
-            video.src = '';
+ 
         })
 
-        // ////////////////////////////
-        //  video links
-        // ///////////////////////////
+        videoPlayer.addEventListener('click', function (e) {
+            videoPlayer.classList.remove('show-video');
+            body.classList.remove('overflow');
+            video.src = '';
 
-        for (i=0; i < videoItem.length; i++){
-            videoLink[i].addEventListener('click', function(e) {
-            e.preventDefault()
+            
+        })
+
+        /*
+         video links
+        */
+
+        for (i = 0; i < videoItem.length; i++) {
+            videoLink[i].addEventListener('click', function (e) {
+                e.preventDefault()
                 youtubeURL = this.querySelector('div > img').getAttribute('data-youtube')
                 const video = document.querySelector(".video-player iframe")
-                video.src = youtubeURL
+                video.src = `https://www.youtube.com/embed/${ youtubeURL }?rel=0&amp;showinfo=0&amp;autoplay=1`
                 console.log(video.src)
             })
         }
-        
+
         // ////////////////////////////
         //  filter
         // ///////////////////////////
 
         let filterInput = document.getElementById('filterInput');
         filterInput.addEventListener('keyup', filterResultaten);
-        function filterResultaten(){
-        let filterValue = document.getElementById('filterInput').value.toUpperCase();
-        let ul = document.getElementById('videoList');
-        let li = ul.getElementsByTagName('li');
+        function filterResultaten() {
+            let filterValue = document.getElementById('filterInput').value.toUpperCase();
+            let ul = document.getElementById('videoList');
+            let li = ul.getElementsByTagName('li');
 
-        for(let i = 0;i < li.length;i++){
-            let h2 = li[i].getElementsByTagName('h2')[0];
-    
-            if(h2.innerHTML.toUpperCase().indexOf(filterValue) > -1){
-            li[i].style.display = '';
-            } else {
-            li[i].style.display = 'none';
+            for (let i = 0; i < li.length; i++) {
+                let h2 = li[i].getElementsByTagName('h2')[0];
+
+                if (h2.innerHTML.toUpperCase().indexOf(filterValue) > -1) {
+                    li[i].style.display = '';
+                } else {
+                    li[i].style.display = 'none';
+                }
             }
-        }
         }
 
         // ////////////////////////////
         //  open menu
         // ///////////////////////////
 
-        var menuButton = document.querySelector('.menu button')
+        var menuButton = document.querySelector('.menu > button')
         var menu = document.querySelector('.menu')
-        
-        menuButton.addEventListener('click', function() {
+
+
+        function foldMenu(){
             menu.classList.toggle('hide-menu')
             videoOverview.classList.toggle('responsive-padding')
-        })
 
-        function closeMenu(){
-            menu.classList.add('hide-menu');
-            videoOverview.classList.add('responsive-padding')
+            // zet dit in een functie 
+            document.querySelector('.menu-item a').focus()
+            document.querySelector('.filter input').focus()
+            document.querySelector('.add-video input').focus()
+        }
+        
+        menuButton.addEventListener('click', foldMenu)
+
+        window.onscroll = scrollFunction;
+        // request animation tray is wellicht beter
+        function scrollFunction() {
+            if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+                menu.classList.add('hide-menu');
+                videoOverview.classList.add('responsive-padding')
+            }
         }
 
         // ////////////////////////////
         //  open menu-item
         // ///////////////////////////
 
+        var navItems = document.querySelectorAll('.navigation li');
+        var menuItem = document.querySelectorAll('.menu-item');
 
-        var navItem = document.querySelectorAll('.navigation li');
-        var menuItem = document.querySelectorAll('.menu-item');        
-
-        for (i=0; i < navItem.length; i++){
-            navItem[i].addEventListener('click', function() {
+        for (i = 0; i < navItems.length; i++) {
+            navItems[i].addEventListener('click', function (e) {
+                e.preventDefault()
 
                 menu.classList.remove('hide-menu')
                 videoOverview.classList.remove('responsive-padding')
-                
+
                 var selectedNav = this.classList[0]
                 console.log(selectedNav)
-                
-                for (i=0; i < menuItem.length; i++){
-                    
+
+                // foreach(menuItem in menuItems) {
+                //     menuItem.classList.contains()
+                // }
+
+                for (i = 0; i < menuItem.length; i++) {
+
                     if (menuItem[i].classList.contains('show-menu-item')) {
                         menuItem[i].classList.remove('show-menu-item')
                     }
                 }
-                
-                for (i=0; i < navItem.length; i++){
-                    if (navItem[i].classList.contains('select')) {
-                        navItem[i].classList.remove('select')
+
+                for (i = 0; i < navItems.length; i++) {
+                    if (navItems[i].classList.contains('select')) {
+                        navItems[i].classList.remove('select')
                     }
                 }
 
                 this.classList.add('select')
 
-                if (selectedNav == '1') {
-                    document.querySelector('.category-menu').classList.add('show-menu-item')
-                } else if (selectedNav == '2') {
-                    document.querySelector('.filter').classList.add('show-menu-item')
-                } else if (selectedNav = '3') {
-                    document.querySelector('.add-video').classList.add('show-menu-item')
-                } else if (selectedNav = '4') {
-                    document.querySelector('.who-watching').classList.add('show-menu-item')
+                function showMenuItem(cssClass, property) {
+                    document.querySelector(cssClass).classList.add('show-menu-item')
+                    if (property) {
+                        document.querySelector(cssClass, property).focus()
+                    }
+                    document.querySelector(cssClass).focus()
+                 
                 }
                 
+
+                if (selectedNav == '1') {
+                    // showMenuItem('.category-menu', 'a')
+                    document.querySelector('.category-menu').classList.add('show-menu-item')
+                    document.querySelector('.category-menu a').focus()
+
+                } else if (selectedNav == '2') {
+                    document.querySelector('.who-watching').classList.add('show-menu-item')
+                    document.querySelector('.who-watching').focus()
+
+                } else if (selectedNav == '3') {
+                    document.querySelector('.add-video').classList.add('show-menu-item')
+                    document.querySelector('.add-video input').focus()
+
+                } else if (selectedNav == '4') {
+                    document.querySelector('.filter').classList.add('show-menu-item')
+                    document.querySelector('.filter input').focus()
+                }
+
             })
         }
 
@@ -211,60 +296,283 @@
         // ////////////////////////////
         //  filter category
         // ///////////////////////////
-        
-        var category = document.querySelectorAll('.category-menu li');
-        
-        for (i=0; i < category.length; i++){
-            category[i].addEventListener('click', function(e) {
-            e.preventDefault()
-                activeCategory = this.querySelector('div')
-                activeCategory.classList.toggle('active')
-                selectedGenre = activeCategory.classList[1]
-                console.log(selectedGenre)
-                videoGenre = document.querySelectorAll('.video-overview .' + selectedGenre +'')
-                console.log(videoGenre)
 
-                for (i=0; i < videoGenre.length; i++){
-                    videoGenre[i].parentElement.parentElement.classList.toggle('genreActive')
-                }
-            
-                for (i=0; i < videoItem.length; i++){
-                    if(videoItem[i].classList.contains('genreActive')) {
-                        videoItem[i].classList.remove('hidden')
-                    } else {
-                        videoItem[i].classList.add('hidden')
-                    } 
+        window.onload = category
+        var videoGenre;
+        function category() {
+            var category = document.querySelectorAll('.category-menu li:not(:last-of-type)');
 
-                var checkActive = document.querySelector('.genreActive')
-                    if (checkActive == null ) {
-                    videoItem[i].classList.remove('hidden')
+            for (i = 0; i < category.length; i++) {
+                category[i].addEventListener('click', function (e) {
+                    e.preventDefault()
+
+                    activeCategory = this.querySelector('div')
+                    activeCategory.classList.toggle('active')
+                    // comment
+                    selectedGenre = activeCategory.classList[1] // ??
+                    console.log(selectedGenre)
+                    // tip van moe, ik snap hem niet
+                    videoGenre = document.querySelectorAll('.video-overview .' + selectedGenre )
+                    console.log(videoGenre)
+
+                    for (i = 0; i < videoGenre.length; i++) {
+                        videoGenre[i].parentElement.parentElement.classList.toggle('genreActive')
                     }
-                 }
+
+                    var videoItem = document.querySelectorAll(".video-overview li")
+
+                    for (i = 0; i < videoItem.length; i++) {
+                        if (videoItem[i].classList.contains('genreActive')) {
+                            videoItem[i].classList.remove('hidden')
+                        } else {
+                            videoItem[i].classList.add('hidden')
+                        }
+
+                        var checkActive = document.querySelector('.genreActive')
+                        if (checkActive == null) {
+                            videoItem[i].classList.remove('hidden')
+                        }
+                    }
+                })
+            }
+
+        }
+
+        document.getElementById('clear').addEventListener('click', function (e) {
+            document.querySelectorAll('#videoList li').forEach((li) => {
+                li.classList.remove('hidden')
+                li.classList.remove('genreActive')
+            })
+            document.querySelectorAll('.category-menu div').forEach((div) =>{
+                div.classList.remove('active')
+            })
+        })
+
+        // ////////////////////////////
+        //  youtube API
+        // ///////////////////////////    
+
+        var videoContainer = document.querySelector('.videoContainer')
+        let searchInput = document.querySelector('#searchInput')
+        let searchGO = document.querySelector('.addFilter button')
+
+        var youtubeID
+        var youtubeImage
+        var youtubeTitle
+
+        console.log(youtubeImage)
+
+
+        // Execute a function when the user releases a key on the keyboard
+        searchInput.addEventListener("keyup", function (event) {
+            // Cancel the default action, if needed
+            event.preventDefault();
+            // Number 13 is the "Enter" key on the keyboard
+            if (event.keyCode === 13) {
+                // Trigger the button element with a click
+                searchGO.click();
+            }
+        });
+
+        searchGO.addEventListener('click', searchResultaten);
+        function searchResultaten() {
+
+            videoContainer.innerHTML = ''
+
+            let searchValue = document.getElementById('searchInput').value;
+            var searchVideo = searchValue
+
+            var queryurl = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${searchVideo}&type=video&maxResults=10&key=AIzaSyAFLVY9mCE3hBE8niWn6wcNs01nWCZcn1s`;
+            // fetch de gegevens van de wikipedia url
+            fetch(queryurl)
+                .then(response => response.json()) // transform the data into json
+                // .then(data => console.log(data))
+                .then(function (data) {
+
+                    console.log(data.items)
+
+                    for (i = 0; i < data.items.length; i++) {
+
+                        var videoId = data.items[i].id.videoId
+                        var videoTitle = data.items[i].snippet.title
+                        var videoUrl = data.items[i].snippet.thumbnails.high.url
+
+                        var createVideoWrapper = document.createElement('div')
+                        createVideoWrapper.classList.add('videoWrapper')
+                        videoContainer.appendChild(createVideoWrapper)
+
+                        var videoWrapperLink = document.createElement('a')
+                        videoWrapperLink.setAttribute('data-youtube', videoId)
+                        videoWrapperLink.href = '#'
+                        createVideoWrapper.appendChild(videoWrapperLink)
+
+                        var createVideoImage = document.createElement('img')
+                        createVideoImage.src = videoUrl
+                        createVideoImage.classList.add('videoImage')
+                        videoWrapperLink.appendChild(createVideoImage)
+
+                        var createVideoTitle = document.createElement('h2')
+                        videoTitle2 = videoTitle.slice(0, 50)
+                        createVideoTitle.innerHTML = videoTitle2
+                        createVideoTitle.classList.add('videoTitle')
+                        videoWrapperLink.appendChild(createVideoTitle)
+
+                        var createVideoPlus = document.createElement('i')
+                        createVideoPlus.classList.add('plus')
+                        videoWrapperLink.appendChild(createVideoPlus)
+
+                    }
+
+                    var videoCategory
+                    var videoWrapperLink = document.querySelectorAll('.videoWrapper a')
+
+
+
+                    for (i = 0; i < videoWrapperLink.length; i++) {
+                        videoWrapperLink[i].addEventListener('click', function (e) {
+
+                            youtubeID = this.getAttribute('data-youtube')
+                            youtubeImage = this.querySelector('img').src
+                            youtubeTitle = this.querySelector('h2').innerHTML
+
+                            console.log(youtubeID)
+                            console.log(youtubeImage)
+                            console.log(youtubeTitle)
+
+                            var addCategory = document.querySelector('.addCategory')
+                            addCategory.classList.add('showAddCategory')
+                            body.classList.add('overflow');
+
+                            document.querySelector('.addCategory a').focus()
+
+                            var previewImage = document.querySelector('.selectedVideo img')
+                            var previewTitle = document.querySelector('.selectedVideo h2')
+                            previewImage.src = youtubeImage
+                            previewTitle.innerHTML = youtubeTitle
+
+                        })
+                    }
+                })
+        }
+
+        // ////////////////////////////
+        //  Choose category for video
+        // ///////////////////////////    
+
+        var addCategoryItems = document.querySelectorAll('.addCategory li')
+        for (i = 0; i < addCategoryItems.length; i++) {
+            addCategoryItems[i].addEventListener('click', function (e) {
+                e.preventDefault()
+                var categoryItemsDiv = document.querySelectorAll('.addCategory .genre')
+                for (i = 0; i < categoryItemsDiv.length; i++) {
+                    categoryItemsDiv[i].classList.remove('active')
+                }
+
+                var chosenCategory = this.querySelector('div')
+                chosenCategory.classList.toggle('active')
+
+                videoCategory = chosenCategory.classList[1]
+                console.log(videoCategory)
+
+                var categoryIcon = document.querySelector('.selectedVideo i')
+                categoryIcon.className = ' '
+                categoryIcon.classList.add('genre')
+                categoryIcon.classList.add(videoCategory)
             })
         }
 
+        var addCategory = document.querySelector('.addCategory')
+        var cancel = document.querySelector('.cancel')
+        cancel.addEventListener('click', function () {
+            addCategory.classList.remove('showAddCategory')
+            body.classList.remove('overflow');
+        })
 
-// var queryurl = 'https://nl.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=';
-//   // fetch de gegevens van de wikipedia url
-//   fetch(queryurl)
-//   .then(response => response.json()) // transform the data into json
-//     // .then(data => console.log(data))
-//     .then(function(data) {
 
-//       console.log(data)
-//     })
 
-//         buildApiRequest('GET',
-//                 'https://www.googleapis.com/youtube/v3/search',
-//                 {'maxResults': '20',
-//                  'part': 'snippet',
-//                  'q': 'surfing',
-//                  'type': 'video',
-//                  'key': 'AIzaSyAFLVY9mCE3hBE8niWn6wcNs01nWCZcn1s'});
+
+        // ////////////////////////////
+        //  Create new video
+        // ///////////////////////////    
+
+        var videoCategory = 'music'
+        var addNewVideo = document.querySelector('.add')
+        addNewVideo.addEventListener('click', function () {
+
+            addCategory.classList.remove('showAddCategory')
+            body.classList.remove('overflow');
+
+            var newVideoLi = document.createElement('li')
+            newVideoLi.classList.add('.module')
+            videoList.prepend(newVideoLi)
+
+            var newVideoA = document.createElement('a')
+            newVideoA.href = '#'
+            newVideoLi.appendChild(newVideoA)
+
+            var newVideoI = document.createElement('i')
+            newVideoI.classList.add('genre')
+            newVideoI.classList.add(videoCategory)
+            newVideoA.appendChild(newVideoI)
+
+            var newVideoH2 = document.createElement('h2')
+            newVideoH2.innerHTML = youtubeTitle
+            newVideoA.appendChild(newVideoH2)
+
+            var newVideoDiv = document.createElement('div')
+            newVideoA.appendChild(newVideoDiv)
+
+            var newVideoI2 = document.createElement('i')
+            newVideoI2.classList.add('play')
+            newVideoDiv.appendChild(newVideoI2)
+
+            var newVideoImg = document.createElement('img')
+            newVideoImg.src = youtubeImage
+            newVideoImg.setAttribute('data-youtube', youtubeID)
+            newVideoDiv.appendChild(newVideoImg)
+
+            document.querySelector('#videoList a').focus()
+
+            var checkGenre = document.querySelector('.category-menu .' + videoCategory + '')
+            console.log(checkGenre)
+
+            if (document.querySelector('.genreActive') !== null)
+                if (checkGenre.classList.contains('active')) {
+                    newVideoLi.classList.add('genreActive')
+                } else {
+                    newVideoLi.classList.add('hidden')
+                }
+
+            var videoItem = document.querySelectorAll(".video-overview li")
+            var videoLink = document.querySelectorAll(".video-overview a")
+
+            function event() {
+                for (i = 0; i < videoItem.length; i++) {
+                    videoLink[i].addEventListener('click', function (e) {
+                        e.preventDefault()
+                        videoPlayer.classList.add('show-video');
+                        body.classList.add('overflow');
+                        closeVideoButton.focus()
+                    })
+                }
+            }
+
+            event()
+
+            for (i = 0; i < videoItem.length; i++) {
+                videoLink[i].addEventListener('click', function (e) {
+                    e.preventDefault()
+                    youtubeURL = this.querySelector('div > img').getAttribute('data-youtube')
+                    const video = document.querySelector(".video-player iframe")
+                    video.src = `https://www.youtube.com/embed/${youtubeURL}?rel=0&amp;showinfo=0&amp;autoplay=1`
+                    console.log(video.src)
+                })
+            }
+        })
+
+
+
 
     </script>
-
-
-
 </body>
 </html>

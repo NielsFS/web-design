@@ -43,7 +43,7 @@ header h1 {
     bottom: 0rem;
     border-top: 1px solid lightgrey;
     width: 100%;
-    height: 2rem;
+    height: 2.5rem;
     display: flex;
     justify-content: center;
 }
@@ -64,11 +64,12 @@ header h1 {
     font-family: 'Raleway';
     font-weight: 600;
     letter-spacing: 1.5px;
-    font-size: 0.8em;
+    font-size: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: 0.2s ease;
+    border-right: 1.5px solid rgba(128, 128, 128, 0.664);
 }
 
 .navigation a {
@@ -103,7 +104,7 @@ header h1 {
 .menu {
     background: white;
     width: 100%;
-    height: 10rem;
+    height: 15.5rem;
     box-shadow: 0 2px 18px -2px rgba(0,0,0,0.25);
     display: flex;
     justify-content: center;
@@ -116,10 +117,10 @@ header h1 {
 }
 
 
-.menu button {
+.menu > button {
     z-index: 2;
-    height: 2.5em;
-    width: 2.5em;
+    height: 5em;
+    width: 5em;
     padding: 1.5em;
     border-radius: 50px;
     border: 1px solid white;
@@ -134,19 +135,26 @@ header h1 {
     cursor: pointer;
     background-color: white;
     position: absolute;
-    bottom: -17px;
+    bottom: -26px;
 }
 
-.menu button:hover {
+.menu > button:hover {
     transform: scale(1.1) rotate(180deg) ;
     box-shadow: 0 -2px 8px -1px rgba(0,0,0,0.5);
     transition: 0.2s ease;
     cursor: pointer;
 }
 
+.menu > button:focus {
+    transform: scale(1.1) rotate(180deg) ;
+    box-shadow: 0 0px 8px 1px rgba(88, 159, 240, 0.993);
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
 .hide-menu {
     position: fixed;
-    top: -3.5rem;
+    top: -8.5rem;
     transition: 0.4s ease;
     transition-delay: 0.2s;
 }
@@ -171,21 +179,27 @@ header h1 {
 }
 
 .hide-menu button:hover {
-    transform: rotate(360deg) rotate(0deg);
+    transform: rotate(360deg) rotate(0deg) scale(1.1);
     box-shadow: 0 2px 8px -1px rgba(0,0,0,0.5);
     transition: 0.2s ease;
 }
 
+.hide-menu button:focus {
+    transform: rotate(360deg) rotate(0deg);
+    box-shadow: 0 0px 8px 1px rgba(88, 159, 240, 0.993);
+    transition: 0.2s ease;
+}
+
 .menu-item {
-    position: absolute;
-    top: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     background: white;
     display: none;
-    height: 80%;
+    height: 12rem;
     width: 100%;
+    padding: 0 2em;
+    margin-bottom: 1rem;
 }
 
 .show-menu-item {
@@ -201,9 +215,9 @@ header h1 {
 }
 
 .category-menu div {
-    height: 3rem;
-    width: 3rem;
-    border-radius: 25px;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50px;
     transition: 0.4s ease;
     box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.419);
 }
@@ -228,8 +242,12 @@ header h1 {
     justify-content: space-between;
     align-items: center;
     width: 8rem;
-    height: 5em;
+    height: 8em;
     cursor: pointer;
+}
+
+.category-menu .clear {
+    background-color: rgb(239, 188, 252);
 }
 
 .category-menu a {
@@ -244,7 +262,7 @@ header h1 {
 
 .category-menu label {
     font-family: sans-serif;
-    font-size: 0.8em;
+    font-size: 1em;
     cursor: pointer;
 }
 
@@ -305,10 +323,9 @@ header h1 {
     /* #F7331F */
 }
 
-.menu li:hover .music {
+/* .menu li:hover .music {
     box-shadow: 0 1px 15px 0 #F7331F;
-    /* #F7331F */
-}
+} */
 
 
 .movie {
@@ -321,9 +338,9 @@ header h1 {
     /* #20BB33 */
 }
 
-.menu li:hover .movie {
+/* .menu li:hover .movie {
     box-shadow: 0 1px 15px 0 rgb(242, 142, 11);
-}
+} */
 
 .business {
     background: url('pictures/business.png');
@@ -335,9 +352,9 @@ header h1 {
     /* #299BE4 */
 }
 
-.menu li:hover .business {
+/* .menu li:hover .business {
     box-shadow: 0 1px 15px 0 #299BE4;
-}
+} */
 
 .web {
     background: url('pictures/web.png');
@@ -349,9 +366,9 @@ header h1 {
     /* #23F9CB */
 }
 
-.menu li:hover .web{
+/* .menu li:hover .web{
     box-shadow: 0 1px 15px 0 #23F9CB;
-}
+} */
 
 .design {
     background: url('pictures/design.png');
@@ -363,9 +380,9 @@ header h1 {
     /* #AD39DE */
 }
 
-.menu li:hover .design{
+/* .menu li:hover .design{
     box-shadow: 0 1px 15px 0 #AD39DE ;
-}
+} */
 
 .humor {
     background: url('pictures/humor.png');
@@ -377,9 +394,9 @@ header h1 {
     /* #F9CE23 */
 }
 
-.menu li:hover .humor{
+/* .menu li:hover .humor{
     box-shadow: 0 1px 15px 0 #F9CE23;
-}
+} */
 
 .other {
     background: url('pictures/other.png');
@@ -391,9 +408,24 @@ header h1 {
     /* #20BB33 */
 }
 
-.menu li:hover .other{
+/* .menu li:hover .other{
     box-shadow: 0 1px 15px 0 #20BB33;
+} */
+
+.clear {
+    background: url('pictures/eraser.png');
+    background-size: 60%, cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 0px !important;
+    z-index: 2;
+    color: rgb(247, 133, 247);
+    /* #20BB33 */
 }
+
+/* .menu li:hover .clear{
+    box-shadow: 0 1px 15px 0 rgb(247, 133, 247);
+} */
 
 
 /* ///////////////////////////// */
@@ -402,10 +434,10 @@ header h1 {
 
 .video-overview {
     background: rgb(250, 250, 250);
-    padding: 10rem 5%;
+    padding: 11rem 5%;
     transition: 0.4s ease;
     transition-delay: 0.2s;
-    transform: translateY(8rem);
+    transform: translateY(14rem);
 }
 
 .video-overview ul {
@@ -418,12 +450,12 @@ header h1 {
 }
 
 .video-overview li {
-    padding: 0 2em;
-    padding-bottom: 3em;
+    padding: 0 1em;
+    padding-bottom: 2em;
     width: 100%;
     height: 100%;;
     min-width: 20em;
-    max-width: 30em;
+    max-width: 27em;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -435,7 +467,7 @@ header h1 {
 
 .video-overview div {
     position: relative;
-    height: 15em;
+    height: 13em;
     width: 100%;
     max-width: 30em;
     box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.4);
@@ -469,7 +501,7 @@ header h1 {
     width: 100%;
   }
 
-  .video-overview div:hover .play {
+  .video-overview div:hover .play, .video-overview a:focus .play {
     opacity: 1;
   }
 
@@ -478,6 +510,7 @@ header h1 {
     height: 100%;
     display: block;
     object-fit: cover;
+    object-position: center;
 }
 
 .video-overview a {
@@ -586,7 +619,14 @@ header h1 {
     }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1300px) {
+    .video-player iframe {
+        width: 62em;
+        height: 35em;
+    }
+}
+
+@media screen and (min-width: 1500px) {
     .video-player iframe {
         width: 71em;
         height: 40em;
@@ -601,3 +641,326 @@ header h1 {
 .show-video iframe {
     opacity: 1;
 }
+
+
+/* ///////////////////////////// */
+/* add Video */
+/* ///////////////////////////// */
+
+.add-video {
+    position: relative;
+}
+
+.videoContainer {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.transparentGradient {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 10em;
+    background: linear-gradient(to right, transparent 10%, white 90%);
+    pointer-events: none;
+}
+
+.videoWrapper {
+    width: 12rem;
+    margin-right: 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+.videoWrapper img {
+    display: block;
+    width: 12rem;
+    height: 7rem;
+    object-fit: cover;
+}
+
+.videoWrapper h2 {
+    font-size: 0.8em;
+}
+
+.addFilter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2em;
+    align-self: flex-start;
+    margin-top: 1.2em;
+}
+
+.addFilter button {
+    border: 1px solid black;
+    border-radius: 0 0 5px 5px;
+    background: black;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    padding:  0.7em 1em;
+    width: 100%;
+    cursor: pointer;
+}
+
+.addFilter input {
+    height: 3rem;
+    border-radius: 5px 5px 0 0;
+    border: none;
+    text-align: center;
+    background: white;
+    color: rgb(0, 0, 0);
+    font-size: 1em;
+    transition: 0.4s ease;
+    border: 1px solid black;
+}
+
+.addFilter input:focus, .addFilter input:hover {
+    background: rgb(255, 255, 255);
+    outline: none;
+}
+
+.addFilter label {
+    color: black;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5em;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.plus {
+    transition: 0.3s ease;
+    position: absolute;
+    top: 0;
+    height: 70%;
+    width: 100%;
+    background: url('pictures/plus.png');
+    background-size: 20%, cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+}
+
+.videoWrapper a {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    color: black;
+}
+
+.videoWrapper a:focus {
+    outline: none;
+}
+
+.videoWrapper a:hover .plus, .videoWrapper a:focus .plus {
+    background-color: #ffffffb7;
+    opacity: 1;
+    
+}
+
+/* ///////////////////////////// */
+/* add Video category */
+/* ///////////////////////////// */
+
+.addCategory {
+    transition: 0.2s ease;
+    position: fixed;
+    top: 0;
+    z-index: 5;
+    height: 100vh;
+    width: 100vw;
+    display: none;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.596);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10%;
+}
+
+.showAddCategory {
+    opacity: 1;
+    display: flex;
+}
+
+.addCategoryContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    padding: 3em;
+}
+
+.addCategory ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.addCategory > div div {
+    background-color: white;
+}
+
+.addCategoryContainer {
+    width: 100%;
+}
+
+.addCategoryContainer div {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50px;
+    transition: 0.4s ease;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.419);
+}
+
+
+.addCategoryContainer ul {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s ease;
+    padding: 0;
+    margin: 0;
+    width: 35em;
+}
+
+.addCategoryContainer li {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+    width: 8rem;
+    height: 7.5rem;
+    cursor: pointer;
+    margin-top: 1em;
+}
+
+.addCategoryContainer a {
+    color: black;
+    text-decoration: none;
+}
+
+.addCategoryContainer li:hover div {
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,0.7);
+    transform: scale(1.2);
+}
+
+.addCategoryContainer label {
+    font-family: sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.addCategory h1 {
+    position: absolute;
+    top: 0;
+    
+    font-weight: 900;
+    font-family: "Raleway", sans-serif;
+    font-size: 2.8em;
+}
+
+.selectedVideo {
+    display: flex;
+    
+    width: 25em;
+    height: 14em;
+    position: relative;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.4);
+}
+
+.selectedVideo h2 {
+    font-size: 1em;
+    font-weight: 300;
+    position: absolute;
+    bottom: 0;
+    margin-left: 1em;
+    color: white;
+    z-index: 2;
+    padding-right: 3em;
+}
+
+.selectedVideo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.selectedVideo .genre {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1;
+}
+
+.selectedVideo div:after {
+    content:'';
+    position:absolute;
+    left:0; top:0;
+    width:100%; height:100%;
+    display:inline-block;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 10%,rgba(0,0,0,1) 100%); /* W3C */
+  }
+
+.buttons {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 1.5em;
+}
+
+.buttons button {
+    height: 3em;
+    width: 6em;
+    color: white;
+    font-family: "Raleway", sans-serif;
+    font-size: 1.4em;
+    font-weight: 900;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    /* padding: 1em 2em; */
+    box-shadow: 0px 0px 15px 0px rgba(90, 87, 87, 0.493);
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    transform: scale(1.1);
+}
+
+.buttons button:nth-child(2) {
+    background: rgb(230, 48, 48);
+    margin-left: 0.5em;
+}
+.buttons button:nth-child(1) {
+    background: rgb(25, 192, 25);
+    margin-right: 0.5em;
+}
+
+
+
+
+
+
+
+
+
+
+
