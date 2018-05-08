@@ -6,6 +6,24 @@
 - [Versie 4 - week 3 - na usecase test](http://videmo4.niels-schopman.nl/)
 
 # Week 1 & week 2
+
+## User Interface principes
+
+- 1. Clarity is Job
+- 10. Consistency matters
+- 12. Smart organisation reduces cognitive load
+
+1. De pagina moet voor zichzelf spreken. Ik heb er voor gekozen om niet bij alles een titel of uitleg te zetten, omdat dat door de content duidelijk moet zijn. 
+
+2. Ik wilde dat alle video's er even consistent uitzagen. Daarom is er een gradenient op de afbeeldingen gezet, zijn de icoontjes allemaal hetzelfde uitgelijnd en hebben de titels van de video's een maximum lengte. Ook wilde ik consistent zijn door de video's altijd goed in beeld te houden. Zo blijf je de video's altijd goed zien, ook wanneer de menu's uitgeklapt zijn.
+
+3. In mijn ontwerp wilde ik dat de interface zo 'clean' mogelijk zou zijn. Ik heb er daarom voor gekozen om een inklapbaar menu te maken waar je alle handelingen naast het kijken van video's uitvoert. Wanneer je video's aan het browsen bent dan wordt je niet afgeleid door allerlei UI elementen. 
+
+![](https://lh3.googleusercontent.com/KnQEaUiwPCais9xImVccTlF34Zssnwr521B9oJcxCziWdRRD4Oilov5uCOm7dPXfyFFshWlqFRfh7PrQ9Cdnt0UfgamWGe4xCsz9TaqWIJI35TabsD5nZCqxbrBoIZgwyIMipNQdFhImRqoeYlnaouznlI3Ui5o3sPPPGuc6LPmyBckNmkeC4JgKzTxIisiUdlUIE552YmRtOGEmvheV-1XEXNCVqAo8uZt3prNvFjId9VonoGrPdnp5M2Fmdj5LaGXYnO6zWnDsJGXfwuLJE16xP2RWKuug_f2kEB9n-j0tc0XARxeuMuBaNuRyny_B1uDw7QZGBjvOwAGzzsPeOQ6BCW3YLKMqHNKmO2e7pzJrKux0sshszPVfB1jX3NeWJhrx_L13TTk3q4KQ-Oz8qfhPza56qrad9i3u4TtkpfbXGYOQsz-qrUFzbBAQY1hYcSovNZywfykdkHMa2VG-ygFSjiKd18Fzz2tahkT2f5q3aFCHJat7xAgfCM-Wm5ckiWtp_LfnRILRayDei5FQy7-MUfhuWIh-_S4u606dxldDBUveUG-Cf7k2jEq0YiIiMh3VrsGQWLCy1XzatDIxFer0X6HtpEOAom-57ZI=w691-h377-no)
+
+![](https://lh3.googleusercontent.com/PSLVA_RL0735VDyU2HI7XM_ItcXiMyIz3E00pE3fAe9eP7K2f_iYm-3Tv7-pcJ3PQ-hy4fLPTnFDJeffkXWSGr_BrAnVqudDespZ2mtebnG4XvSXBQyHHda_rai-jtEascwDGuSI0NjqYlg42jWNbqzaY7VoiE_G7cb0wvKSRLegmPwPnOO8_NpLRmTZ3TRnTdEfFs0_45oQmBquxCg2p3rHkQAFV_UI1_I-mhfLZypwKBTaDlRqjE84gp4-vL3VJIckWVwFhaoV4ttyyWLFtn48q_lusqvZi_wYFnbKSg_rmS5l0vyR12gIP4hIgvh5-sJNuFYnC8p7exFVMhxQ3nJjXlCBByA4EJNguv7LH8dP7uQQe7k02BfdRnKpRy2OrkoVc-LOB7NrzfEjxT6NpMai8OHWP_iIrbEOJCTYJnUkmz7D3Ttnq4PTWUfpEJ4shMjx9yBzYaOnFbKKORk_vuJKYRXrFpAt4VR4vMHWyLAW6yBuzqwGaQJ5JEmmPDYp_jHQoNtQetcD0mDjvjoETUd9ZHZYo_1oaJbjQwBEpntIxF1JtLEodT4uwpsqxn0D3DrVPPfgd2xZvT-2yrar-12qktU382fluiH-h_M=w2852-h1542-no)
+
+
 ## Feedback na week 1
 
 - De search knop en de balk die van de zijkant inschuift lijken niet echt een duidelijk nut te hebben -> kill it
@@ -70,15 +88,15 @@ Barteljaap zit veel binnen omdat hij een spierziekte heeft. Hij houdt enorm van 
 
 ## User Interface Principles
 
-1. Clarity is Job
-10. Consistency matters
-12. Smart organisation reduces cognitive load
+- 1. Clarity is Job
+- 10. Consistency matters
+- 12. Smart organisation reduces cognitive load
 
-De pagina moet voor zichzelf spreken. Ik heb er voor gekozen om niet bij alles een titel of uitleg te zetten, omdat dat door de content duidelijk moet zijn. 
+1. De pagina moet voor zichzelf spreken. Ik heb er voor gekozen om niet bij alles een titel of uitleg te zetten, omdat dat door de content duidelijk moet zijn. 
 
-Door het menu, maar ook de consistentie in de content (titel, categorieën bij video's en layout) is het de bedoeling om een rustige en en overzichtelijke indruk van de pagina te geven. 
+2. Door het menu, maar ook de consistentie in de content (titel, categorieën bij video's en layout) is het de bedoeling om een rustige en en overzichtelijke indruk van de pagina te geven. 
 
-In mijn ontwerp wilde ik dat de interface zo 'clean' mogelijk zou zijn. Ik heb er daarom voor gekozen om een inklapbaar menu te maken waar je alle handelingen naast het kijken van video's uitvoert. Wanneer je video's aan het browsen bent dan wordt je niet afgeleid door allerlei UI elementen. 
+3. In mijn ontwerp wilde ik dat de interface zo 'clean' mogelijk zou zijn. Ik heb er daarom voor gekozen om een inklapbaar menu te maken waar je alle handelingen naast het kijken van video's uitvoert. Wanneer je video's aan het browsen bent dan wordt je niet afgeleid door allerlei UI elementen. 
 
 ## Use case - Marijn
 
